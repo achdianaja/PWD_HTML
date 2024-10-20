@@ -1,6 +1,3 @@
-// var btnSubmit = document.getElementById('btnSubmit');
-
-
 function btnSubmit(){
     const x = document.getElementById('name').value;
     const y = document.getElementById('password').value;

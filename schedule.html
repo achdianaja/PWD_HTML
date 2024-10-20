@@ -16,8 +16,36 @@
             text-decoration: none;
         }
 
-        tr:hover{
-            background-color: rgba(255 255 0.5);
+        table {
+            caption-side: bottom;
+            border-collapse: collapse;
+            width: 100%;
+            height: 100%;
+        }
+
+        .senin:hover,
+        .senin:hover~.senin {
+            background-color: rgba(255, 255, 0, 0.5);
+        }
+
+        .selasa:hover,
+        .selasa:hover~.selasa {
+            background-color: rgba(0, 255, 255, 0.5);
+        }
+
+        .rabu:hover,
+        .rabu:hover~.rabu {
+            background-color: rgba(255, 0, 255, 0.5);
+        }
+
+        .kamis:hover,
+        .kamis:hover~.kamis {
+            background-color: rgba(255, 165, 0, 0.5);
+        }
+
+        .jumat:hover,
+        .jumat:hover~.jumat {
+            background-color: rgba(0, 255, 0, 0.5);
         }
     </style>
 </head>
@@ -26,8 +54,13 @@
     <!-- start navbar -->
     <nav class="navbar">
         <div class="navbar-collaps">
+            <div class="navbar-brand">
+                <h1><a href="home.html">A</a></h1>
+            </div>
+
             <div class="menu">
                 <ul>
+                    <li class="menu-item"><a href="home.html">Home</a></li>
                     <li class="menu-item"><a href="about.html">About</a></li>
                     <li class="menu-item"><a href="contact.html">Contact me</a></li>
                     <li class="menu-item"><a href="profile.html">Profile</a></li>
@@ -35,66 +68,100 @@
                 </ul>
             </div>
 
+            <div class="logout">
+                <a href="index.html" class="btn btn-violet">Logout</a>
+            </div>
         </div>
     </nav>
     <!-- end navbar -->
 
     <main class="container">
 
-    
-    <div class="breadcumb">
-        <a href="home.html">Home</a> / My schedule
+
+        <div class="breadcumb">
+            <a href="home.html">Home</a> / My schedule
+        </div>
+        <div class="content-center">
+            <table border="1">
+                <tr>
+                    <th colspan="5" style="background-color: blueviolet; color: white;">2024/2025</th>
+                </tr>
+                <tr style="background-color: violet; color: white;">
+                    <th>Hari</th>
+                    <th>Mata Kuliah</th>
+                    <th>Jam Masuk</th>
+                    <th>Jam Keluar</th>
+                    <th>Dosen</th>
+                </tr>
+                <tr class="senin">
+                    <td rowspan="2">Senin</td>
+                    <td>Praktikum Sistem Operasi</td>
+                    <td>08:30</td>
+                    <td>09:20</td>
+                    <td>Bu Wahyu</td>
+                </tr>
+                <tr class="senin">
+                    <td>Sistem Operasi</td>
+                    <td>09:30</td>
+                    <td>11:20</td>
+                    <td>Bu Wahyu</td>
+                </tr>
+                <tr class="selasa">
+                    <td rowspan="2">Selasa</td>
+                    <td>Perancangan UI dan UX</td>
+                    <td>08:00</td>
+                    <td>10:30</td>
+                    <td>Pak Ikmal</td>
+                </tr>
+                <tr class="selasa">
+                    <td>Sistem Terdistribusi</td>
+                    <td>11:20</td>
+                    <td>13:00</td>
+                    <td>Bu Wahyu</td>
+                </tr>
+                <tr class="rabu">
+                    <td rowspan="2">Rabu</td>
+                    <td>Pemrograman Web Dasar</td>
+                    <td>08:50</td>
+                    <td>10:30</td>
+                    <td>Pak Hadi</td>
+                </tr>
+                <tr class="rabu">
+                    <td>Pengantar Keamanan Komputer</td>
+                    <td>12:10</td>
+                    <td>14:40</td>
+                    <td>Pak Awan</td>
+                </tr>
+                <tr class="kamis">
+                    <td>Kamis</td>
+                    <td>Proses Bisnis dan Sistem Informasi</td>
+                    <td>12:10</td>
+                    <td>14:40</td>
+                    <td>Pak Awan</td>
+                </tr>
+                <tr class="jumat">
+                    <td>Jumat</td>
+                    <td>Analisis dan Perancangan Perangkat Lunak</td>
+                    <td>08:50</td>
+                    <td>11:20</td>
+                    <td>Pak Iwan</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <div class="footer">
+        <div class="container">
+            <ul>
+                <li class="menu-item"><a href="home.html">Home</a></li>
+                <li class="menu-item"><a href="about.html">About</a></li>
+                <li class="menu-item"><a href="contact.html">Contact me</a></li>
+                <li class="menu-item"><a href="profile.html" id="active">Profile</a></li>
+                <li class="menu-item"><a href="schedule.html">My schedule</a></li>
+            </ul>
+            <hr>
+            <p class="footer-text">© 2004 Achdian</p>
+        </div>
     </div>
-    <center>
-        <table border="1"">
-            <tr>
-                <th colspan=" 4" style="background-color: blueviolet; color: white;">2024/2025</th>
-            </tr>
-            <tr style="background-color: violet; color: white;">
-                <th>Mata Kuliah</th>
-                <th>Hari</th>
-                <th>Jam masuk</th>
-                <th>Jam Keluar</th>
-            </tr>
-            <tr>
-                <td>Sistem Operasi</td>
-                <td>Senin</td>
-                <td>9.40</td>
-                <td>11.30</td>
-            </tr>
-            <tr>
-                <td>Sistem Operasi</td>
-                <td>Senin</td>
-                <td>9.40</td>
-                <td>11.30</td>
-            </tr>
-            <tr>
-                <td>Sistem Operasi</td>
-                <td>Senin</td>
-                <td>9.40</td>
-                <td>11.30</td>
-            </tr>
-            <tr>
-                <td>Sistem Operasi</td>
-                <td>Senin</td>
-                <td>9.40</td>
-                <td>11.30</td>
-            </tr>
-            <tr>
-                <td>Sistem Operasi</td>
-                <td>Senin</td>
-                <td>9.40</td>
-                <td>11.30</td>
-            </tr>
-            <tr>
-                <td>Sistem Operasi</td>
-                <td>Senin</td>
-                <td>9.40</td>
-                <td>11.30</td>
-            </tr>
-        </table>
-    </center>
-</main>
 </body>
 
 </html>

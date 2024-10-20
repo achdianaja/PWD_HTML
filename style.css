@@ -17,11 +17,6 @@ body {
     margin-left: auto;
 }
 
-table {
-    caption-side: bottom;
-    border-collapse: collapse
-}
-
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -30,7 +25,7 @@ table {
 
 @media (min-width: 768px) {
     .container {
-        max-width: 720px;
+        max-width: 855px;
     }
 }
 
@@ -46,27 +41,72 @@ table {
     }
 }
 
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.follow-me {
+    display: flex;
+    justify-content: start;
+}
+
+.follow-me img {
+    margin-top: 10px;
+    object-fit: cover;
+    width: 50px;
+    height: auto;
+}
+
+.follow-me .fb {
+    margin-bottom: 5px;
+    width: auto;
+    height: 45px;
+}
+
+.bhs {
+    display: flex;
+    justify-content: center;
+}
+
+.bhs img {
+    width: 100px;
+    height: auto;
+}
+
 .navbar {
-    background-color: white;
+    background-color: #C9EEFF;
     padding: 25px;
-    position: relative;
-    box-shadow: 0 0 10px;
     margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-brand a {
+    color: black;
+
 }
 
 .navbar-collaps {
     display: flex;
-    justify-content: center;
-    position: relative;
-
+    justify-content: space-around;
+    align-items: center;
 }
 
 .menu ul {
     display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
-#active{
-    color: blueviolet;
+#active {
+    color: #AA77FF;
     font-size: 15px;
 }
 
@@ -82,8 +122,12 @@ table {
 }
 
 .menu-item a:hover {
-    color: blueviolet;
+    color: #AA77FF;
     font-size: 15px;
+}
+
+.logout a {
+    justify-content: end;
 }
 
 .contact {
@@ -119,37 +163,49 @@ table {
     }
 }
 
-.card{
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64vh;
+}
+
+.card {
     background-color: white;
-    padding: 25px;
-    box-shadow: 0px 0px 10px 0px grey;
+    padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
-    border-left: 5px solid blueviolet;
+    border: 0.5px solid #000;
+    border-left: 5px solid #AA77FF;
     align-items: center;
 }
 
 .card-body {
-    display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.card-img{
+.card-img {
     border-radius: 100%;
     width: 100px;
     height: auto;
 }
 
-.form-control{
+.form-control {
     border-radius: 10px;
     padding: 10px;
     border: 1px solid #000;
     font-size: 12px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
-.btn{
+.btn {
     padding: 5px;
     border: none;
     font-size: 15px;
@@ -157,17 +213,64 @@ table {
     border-radius: 5px;
 }
 
-.btn-violet{
-    background-color: blueviolet;
+.btn-violet {
+    background-color: #AA77FF;
 }
 
-.btn-violet:hover{
+.btn-violet:hover {
     color: #b6b4b4;
     background-color: rgb(118, 36, 196);
     cursor: pointer;
 }
 
-.breadcumb{
+.breadcumb {
     margin-bottom: 20px;
     font-style: bold;
+}
+
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 48px;
+    text-align: center;
+    background-color: #C9EEFF;
+    margin-top: 20px;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 875px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
 }
